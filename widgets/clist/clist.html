@@ -1,0 +1,23 @@
+<h1 class="title" data-bind="title"></h1>
+
+<ol>
+  <li data-foreach-item="items">
+    <span class="label" data-bind="item.label"></span>
+    <span class="value" data-bind="item.value"></span>
+  
+</ol>
+
+    <table class="list-nostyle">
+    <tr><th>SNO</th><th>UUID</th><th>CLASSNAME</th> <th>URL</th></tr>
+      <tr data-foreach-item="items">
+        <td><span class="label" data-bind="item.label"></span></td>
+        <td><span class="uuid" data-bind="item.uuid"></span> </td>
+        <td><span class="classname" data-bind="item.classname"></span> </td>
+        <td> <a data-bind-href="item.uri">URL</a>
+      </td>
+      </tr>
+      
+    </table>
+
+<p class="more-info" data-bind="moreinfo"></p>
+<p class="updated-at" data-bind="updatedAtMessage"></p>
