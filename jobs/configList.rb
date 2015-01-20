@@ -1,7 +1,6 @@
 require './lib/config.rb'
 
 
-
 SCHEDULER.every '5s' do
 
    k = 0;
@@ -10,29 +9,34 @@ SCHEDULER.every '5s' do
    keys = get_Keys(current)
    len = keys.length
    
- 
+  
   buzzword_counts = Hash.new()
   
 
-for i in (0..(len-2))
-  	
- 	buzzword_counts[k] = { label: keys[i], value: current[keys[i]]  }
- 	k=k+1
- 	
+
+  for i in (0..(len-2))
+ 	  buzzword_counts[k] = { label: keys[i], value: current[keys[i]]  }
+ 	  k=k+1
   end
 
   keys = get_Keys(current[:response])
   len = keys.length
 
   for i in (0..(len-1))
- 
- 	buzzword_counts[k] = { label: keys[i], value: current[:response][keys[i]]  }
+  	
+    current[:response][keys[i]] = current[:response][keys[i]].to_s
+    
+    if current[:response][keys[i]].length <= 0 then
+      next
+    end
+    keyy = keys[i].to_s
+    keyy.slice! "@"
+ 	buzzword_counts[k] = { label: keyy, value: current[:response][keys[i]]  }
  	k=k+1
  	
   end
 
 
- 
  send_event('configList', { items: buzzword_counts.values })
 
 end

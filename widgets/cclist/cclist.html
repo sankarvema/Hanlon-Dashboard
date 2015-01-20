@@ -8,11 +8,13 @@
 </ol>
 
     <table class="list-nostyle">
-    <tr><th>SNO</th><th>UUID</th><th>CLASSNAME</th> <th>URL</th></tr>
+    <tr><th>SNO</th><th>UUID</th><th>CLASSNAME</th> <th>Bind  Counter</th> <th> Line Number</th> <th>URL</th></tr>
       <tr data-foreach-item="items">
         <td><span class="label" data-bind="item.label"></span></td>
         <td><span class="uuid" data-bind="item.uuid"></span> </td>
         <td><span class="classname" data-bind="item.classname"></span> </td>
+        <td><span class="bindcounter" data-bind="item.bindcounter"></span> </td>
+        <td><span class="linenumber" data-bind="item.linenumber"></span> </td>
         <td> <a target="_blank" data-bind-href="item.uri">URL</a>
       </td>
       </tr>
