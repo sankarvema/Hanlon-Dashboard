@@ -1,14 +1,18 @@
 
+body {
+  background: #473E3F;
+}
+
 .custom1 {
-  background: #E05151;
+  background: #EF7126;
 }
 
 .custom2 {
-  background: #9B539C;
+  background: #F9E559;
 }
 
 .custom3 {
-  background: #EE8D09;
+  background: #218C8D;
 }
 
 .custom4 {
@@ -19,6 +23,13 @@
   background: #2F8F75;
 }
 
-body {
-  background: #73C5E1;
+.custom6 {
+  background: #EE8D09;
+ 
 }
+
+.custom7 {
+  background: #4DC5D6;
+}
+
+

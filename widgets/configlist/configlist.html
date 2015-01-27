@@ -1,0 +1,24 @@
+
+<h1 class="title" data-bind="title"></h1>
+
+<ol>
+  <li data-foreach-item="items">
+    <span class="label" data-bind="item.label"></span>
+    <span class="value" data-bind="item.value"></span>
+  
+</ol>
+
+    <table class="scroll">
+    <thead>
+    <tr><th>Name</th><th>Value</th></tr>
+    </thead>
+    <tbody>
+        <tr data-foreach-item="items">
+            <td><span data-bind="item.label"></span></td>
+            <td><span data-bind="item.value"></span></td>
+        </tr>
+      </tbody>
+    </table>
+
+<p class="more-info" data-bind="moreinfo"></p>
+<p class="updated-at" data-bind="updatedAtMessage"></p>

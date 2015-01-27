@@ -1,0 +1,34 @@
+
+<h1 class="title" data-bind="title"></h1>
+
+<ol>
+  <li data-foreach-item="items">
+    <span class="label" data-bind="item.label"></span>
+    <span class="value" data-bind="item.value"></span>
+  
+</ol>
+
+    <table class="scroll">
+    <thead>
+    <tr><th>UUID</th><th>check in time</th></tr>
+    </thead>
+    <tbody>
+        <tr data-foreach-item="items">
+          
+            <td> <a  id="nodebutton" data-bind-dataidname="item.din"  > <span class="uuid" data-bind="item.uuids"></span> </a>
+           </td>
+          <td><span class="cit" data-bind="item.cit"></span> </td>
+         
+          <td data-bind-id="item.din" class="hid" title="Node Information">
+                Noun : <span data-bind="item.noun"></span></br>
+                UUID : <span data-bind="item.uuid"></span></br>
+                classname : <span data-bind="item.classname"></span></br>
+                uri : <span data-bind="item.uri"></span></br>
+          </td>
+
+        </tr>
+      </tbody>
+    </table>
+
+<p class="more-info" data-bind="moreinfo"></p>
+<p class="updated-at" data-bind="updatedAtMessage"></p>
