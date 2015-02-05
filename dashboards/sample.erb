@@ -1,15 +1,68 @@
-<% content_for :title do %>My super sweet dashboard<% end %>
+<script type='text/javascript'>
+$(function() {
+  Dashing.numColumns = 3
+});
+</script>
+
+<% content_for :title do %>Hanlon DashBoard<% end %>
+	
+<!-- 
+http://hanlon.herokuapp.com/hanlon/api/v1/config
+http://hanlon.herokuapp.com/hanlon/api/v1/image
+http://hanlon.herokuapp.com/hanlon/api/v1/node
+http://hanlon.herokuapp.com/hanlon/api/v1/policy
+http://hanlon.herokuapp.com/hanlon/api/v1/active_model
+ -->
 <div class="gridster">
   <ul>
     
-    <li data-row="1" data-col="1" data-sizex="2" data-sizey="3">
-      <div data-id="configList" data-view="List" data-unordered="true" data-title="Config" data-moreinfo=""></div>
+	  <li data-row="1" data-col="1" data-sizex="2" data-sizey="1" >
+      <div id="welcometext" data-id="welcomeText" data-view="Customtext"  data-title="Hanlon Admin" data-moreinfo="" class="custom1"></div>
     </li>
 
-	<li data-row="1" data-col="1" data-sizex="2" data-sizey="2">
-      <div data-id="nodesList" data-view="Clist" data-unordered="true" data-title="Nodes" data-moreinfo=""></div>
+     <li data-row="1" data-col="1" data-sizex="1" data-sizey="1" >
+      <div id="textcount" data-id="textCount" data-view="Customtextcount" data-moreinfo="" class="custom2"></div>
     </li>
     
+      <li data-row="1" data-col="1" data-sizex="1" data-sizey="1" >
+      <div id="nodeList" data-id="nodesList" data-view="Nodelist" data-unordered="true" data-title="Nodes Status" data-moreinfo="" class="custom3"></div>
+
+    </li>
+        <li data-row="1" data-col="1" data-sizex="1" data-sizey="1" >
+     <div id="configList" data-id="configList" data-view="Configlist" data-unordered="true" data-title="Config" data-moreinfo="" class="custom4"></div>
+   </li>
+    
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div id="policyList" data-id="policyList" data-view="Policylist" data-unordered="true" data-title="Active Policies" data-moreinfo="" class="custom5"></div>
+    </li>
+
+    <li data-row="1" data-col="1" data-sizex="2" data-sizey="1">
+      <div id="Hanlonlog" data-id="" data-view="Text"  data-title="hanlon Log " data-moreinfo="" class="custom6"></div>
+    </li>
+  
+
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div id="imageList" data-id="imageList" data-view="Imagelist" data-unordered="true" data-title="Active Images" data-moreinfo="" class="custom7"></div>
+    </li>
+
+
+   <!--  
+    
+    
+    <li data-row="1" data-col="1" data-sizex="2" data-sizey="2">
+      <div data-id="policyList" data-view="Cclist" data-unordered="true" data-title="Policy" data-moreinfo="" class="custom5 scroll"></div>
+    </li>
+    
+     -->
+
+    
+    <!-- <li data-row="1" data-col="1" data-sizex="2" data-sizey="3" >
+      <div data-id="activeModelList" data-view="Clist" data-unordered="true" data-title="Active Model" data-moreinfo="" class="custom3"></div>
+    </li>
+     -->
+
+
   </ul>
   
 </div>
+

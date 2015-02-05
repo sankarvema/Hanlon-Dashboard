@@ -11,7 +11,7 @@ $moreinfo-color:    rgba(255, 255, 255, 0.7);
 // ----------------------------------------------------------------------------
 // Widget-list styles
 // ----------------------------------------------------------------------------
-.widget-clist {
+.widget-imagelist {
 
   background-color: $background-color;
   vertical-align: top;
@@ -90,5 +90,9 @@ tbody td, thead th {
 
 tbody td:last-child, thead th:last-child {
     //border-right: none;
+}
+
+.hid {
+  display: none;
 }
 }

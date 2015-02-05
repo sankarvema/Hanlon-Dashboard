@@ -2,41 +2,42 @@ require './lib/config.rb'
 
 
 
-SCHEDULER.every '5s' do
+SCHEDULER.every '25s' do
 
-   k=0;
    q = Names.new "http://hanlon.herokuapp.com/hanlon/api/v1/node"
    current = q.query
-   keys = get_Keys(current)
-   len = keys.length
    
  
   buzzword_counts = Hash.new()
   
 
-
   resp = current[:response]
   resp_len = resp.length
   
-
+  i=0;
   for i in (0..(resp_len-1))
-    keys = get_Keys(resp[i])
-    buzzword_counts[k] = {label: i+1, uuid: resp[i][keys[1]] , classname:  resp[i][keys[2]] , uri: resp[i][keys[3]]}
-    k=k+1
+    resp[i][:@classname].slice! "ProjectHanlon::"
+    buzzword_counts[i] = {
+                            
+                            uuid: resp[i][:@uuid] , 
+                            classname:  resp[i][:@classname] , 
+                            uri: resp[i][:@uri],
+                            uuids: resp[i][:@uuid][0,6],
+                            noun: resp[i][:@noun],
+                            cit: "1234",
+                            din: "nodelistnum#{i}"
+
+
+                          }
+    
     
     
   end
 
   
 
-
+ 
  send_event('nodesList', { items: buzzword_counts.values })
-
+ send_event('textCount', {alive: i+1, total: 144})
 end
 
-def get_Keys(h)
-  keys = []
-  return keys if h.empty?
-  h.each {|k,v| keys << k; }  
-  keys
-end
