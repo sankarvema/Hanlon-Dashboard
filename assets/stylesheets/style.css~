@@ -1,6 +1,6 @@
 
 body {
-  background: #473E3F;
+background-image: url(<%= asset path 'dd.jpg' %>);
 }
 
 .custom1 {

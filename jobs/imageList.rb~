@@ -25,7 +25,7 @@ SCHEDULER.every '5s' do
     buzzword_counts[i] = { 
                             label: i+1, 
                             uuid: resp[i][:@uuid] ,
-                            uuids: resp[i][:@uuid][0,15] ,
+                            uuids: resp[i][:@uuid][0,6] ,
                             classname:  resp[i][:@classname] , 
                             uri: resp[i][:@uri],
                             bindcounter: "1234",

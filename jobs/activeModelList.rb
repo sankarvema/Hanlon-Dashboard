@@ -13,7 +13,7 @@ SCHEDULER.every '5s' do
   resp_len = resp.length
 
   for i in (0..(resp_len-1))
-    keys = get_Keys(resp[i])
+    #keys = get_Keys(resp[i])
     resp[i][:@classname].slice! "ProjectHanlon::PolicyTemplate::"
     buzzword_counts[i] = {
                             label: i+1, 
