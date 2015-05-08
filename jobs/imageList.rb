@@ -29,7 +29,8 @@ SCHEDULER.every '5s' do
                             classname:  resp[i][:@classname] , 
                             uri: resp[i][:@uri],
                             bindcounter: "1234",
-                            noun: resp[i][:@noun]
+                            noun: resp[i][:@noun],
+                            din: "imagelistnum#{i}"
                           }
 
     

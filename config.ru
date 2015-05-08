@@ -2,6 +2,7 @@ require 'dashing'
 
 configure do
   set :auth_token, 'YOUR_AUTH_TOKEN'
+  set :default_dashboard, 'Hanlon_Dashboard'
 
   helpers do
     def protected!

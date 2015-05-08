@@ -1,8 +1,18 @@
+<!--
 <script type='text/javascript'>
 $(function() {
   Dashing.numColumns = 3
 });
 </script>
+-->
+
+<script type='text/javascript'>
+$(function() {
+ Dashing.numColumns = 3
+Dashing.gridsterLayout('[{"col":1,"row":1,"size_x":2,"size_y":0.5},{"col":3,"row":1,"size_x":1,"size_y":0.5},{"col":1,"row":2,"size_x":2,"size_y":1},{"col":1,"row":3,"size_x":1,"size_y":1},{"col":3,"row":2,"size_x":2,"size_y":1},{"col":1,"row":4,"size_x":3,"size_y":1},{"col":1,"row":5,"size_x":2,"size_y":1}]')
+});
+</script>
+
 
 <% content_for :title do %>Hanlon DashBoard<% end %>
 	
@@ -16,36 +26,39 @@ http://hanlon.herokuapp.com/hanlon/api/v1/active_model
 <div class="gridster">
   <ul>
     
-	  <li data-row="1" data-col="1" data-sizex="2" data-sizey="1" >
+	 
+<li data-row="1" data-col="1" data-sizex="2" data-sizey="0.5" >
       <div id="welcometext" data-id="welcomeText" data-view="Customtext"  data-title="Hanlon Admin" data-moreinfo="" class="custom1"></div>
     </li>
 
-     <li data-row="1" data-col="1" data-sizex="1" data-sizey="1" >
+     <li data-row="1" data-col="1" data-sizex="1" data-sizey="0.5" >
       <div id="textcount" data-id="textCount" data-view="Customtextcount" data-moreinfo="" class="custom2"></div>
     </li>
     
-      <li data-row="1" data-col="1" data-sizex="1" data-sizey="1" >
+      <li data-row="1" data-col="1" data-sizex="2" data-sizey="1" style=" position: absolute; left: 5px; top: 199px;">
       <div id="nodeList" data-id="nodesList" data-view="Nodelist" data-unordered="true" data-title="Nodes Status" data-moreinfo="" class="custom3"></div>
 
-    </li>
-        <li data-row="1" data-col="1" data-sizex="1" data-sizey="1" >
-     <div id="configList" data-id="configList" data-view="Configlist" data-unordered="true" data-title="Config" data-moreinfo="" class="custom4"></div>
-   </li>
     
-    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+    
+    <li data-row="1" data-col="1" data-sizex="2" data-sizey="1" style=" position: absolute; left: 5px; top: 575px;" >
       <div id="policyList" data-id="policyList" data-view="Policylist" data-unordered="true" data-title="Active Policies" data-moreinfo="" class="custom5"></div>
     </li>
 
-    <li data-row="1" data-col="1" data-sizex="2" data-sizey="1">
-      <div id="Hanlonlog" data-id="" data-view="Text"  data-title="hanlon Log " data-moreinfo="" class="custom6"></div>
-    </li>
+   </li>
+        <li data-row="1" data-col="1" data-sizex="1" data-sizey="1" style=" position: absolute; left: 625px; top: 199px;">
+     <div id="configList" data-id="configList" data-view="Configlist" data-unordered="true" data-title="Config" data-moreinfo="" class="custom4"></div>
+   </li>
   
+     
 
-    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+    <li data-row="1" data-col="1" data-sizex="2" data-sizey="1"  style=" position: absolute; left: 5px; top: 950px;">
       <div id="imageList" data-id="imageList" data-view="Imagelist" data-unordered="true" data-title="Active Images" data-moreinfo="" class="custom7"></div>
     </li>
 
-
+    <li data-row="1" data-col="1" data-sizex="3" data-sizey="1"  style=" position: absolute; left: 5px; top: 1330px;">
+      <div id="Hanlonlog" data-id="" data-view="Text"  data-title="hanlon Log " data-moreinfo="" class="custom6"></div>
+    </li>     
+   
    <!--  
     
     
@@ -65,4 +78,3 @@ http://hanlon.herokuapp.com/hanlon/api/v1/active_model
   </ul>
   
 </div>
-
